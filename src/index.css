@@ -7,3 +7,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --primary-color: #0d0d0d;
+  --secondary-color: #6204bf;
+  --secondary-color-dark: #2e0259;
+  --secondary-color-light: #7c05f2;
+  --white-color: #f2f2f2;
+}

@@ -5,6 +5,7 @@ import { Login } from './components/Navbar/components/Login';
 function App() {
   return (
     <div className="App">
+      <h1 className="text-3xl font-bold underline">Hello</h1>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/login">Login</Link>

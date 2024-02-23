@@ -20,6 +20,7 @@
     "quotes": ["error", "single"],
     "linebreak-style": ["error", "unix"],
     "prettier/prettier": ["error", { "singleQuote": true, "parser": "babel" }],
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react/jsx-key": "off"
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const LoginPresentation = ({
   handleEmail,
@@ -58,7 +59,7 @@ export const LoginPresentation = ({
           <p className="text-[--white-color] text-sm text-left">
             Need an account?{' '}
             <span className="text-[--secondary-color] font-semibold">
-              Register
+              <Link to="/register">Register</Link>
             </span>
           </p>
         </div>

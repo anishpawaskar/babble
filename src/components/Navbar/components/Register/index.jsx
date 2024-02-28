@@ -3,7 +3,6 @@ import { RegisterPresentation } from './Presentation';
 import { FORM_ACTIONS } from './registerForm.constant';
 
 export const Register = () => {
-  //const [formActionItems, setFormActionItems] = useState(FORM_ACTIONS);
   const [formActionInputs, setFormActionInputs] = useState(FORM_ACTIONS);
   const [formData, setFormData] = useState({
     email: '',

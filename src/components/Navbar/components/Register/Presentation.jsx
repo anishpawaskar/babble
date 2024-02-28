@@ -1,5 +1,4 @@
 import React from 'react';
-//import { FORM_ACTIONS } from './registerForm.constant';
 import { Link } from 'react-router-dom';
 
 export const RegisterPresentation = ({

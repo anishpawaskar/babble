@@ -29,6 +29,11 @@ export const RegisterPresentation = ({
           name={action?.name}
           className="w-full h-10 rounded-sm mt-2 text-black text-[0.93rem] font-normal focus:outline-none p-[0.625rem]"
         />
+        {action?.msg && (
+          <p className="normal-case mt-[0.625rem] text-[0.81rem] font-normal leading-none">
+            {action.msg}
+          </p>
+        )}
       </label>
     );
   });
@@ -40,7 +45,7 @@ export const RegisterPresentation = ({
         src="/images/auth-background.png"
         alt="illustation"
       />
-      <form className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-center justify-center gap-4  bg-[--primary-color] p-8 max-[485px]:w-full max-[485px]:p-2 max-[480px]:h-full">
+      <form className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-center justify-center gap-4  bg-[--primary-color] p-8 max-[485px]:w-full max-[485px]:p-4 max-[480px]:h-full">
         <h2 className="text-2xl font-semibold text-center text-[--white-color]">
           Create an account
         </h2>

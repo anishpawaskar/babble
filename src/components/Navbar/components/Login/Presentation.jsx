@@ -13,7 +13,12 @@ export const LoginPresentation = ({
         src="/images/auth-background.png"
         alt="illustation"
       />
-      <div className="flex flex-col items-center gap-3 absolute ori top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[25rem] h-[31.25rem] bg-[--primary-color] rounded p-[1.625rem]">
+      <div className="flex flex-col items-center gap-3 absolute ori top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[25rem] h-[31.25rem] bg-[--primary-color] rounded p-[1.625rem] max-[485px]:w-full max-[485px]:h-full">
+        <img
+          src="/images/logo-1.png"
+          alt="babble-logo"
+          className="hidden max-[485px]:block"
+        />
         <div className="flex text-[--white-color] text-center flex-col gap-[0.3rem]">
           <h2 className="text-2xl">Welcome back!</h2>
           <p className="text-sm tracking-wide">
@@ -25,7 +30,7 @@ export const LoginPresentation = ({
             className="text-[--white-color] text-[0.70rem] font-semibold leading-none uppercase"
             htmlFor="email"
           >
-            Email or username
+            Email or username <span className="text-[--error-color]">*</span>
             <input
               onChange={(e) => handleEmail(e)}
               className="w-full h-8 rounded-sm mt-2 text-black text-[0.93rem] font-normal focus:outline-none px-2 py-3"
@@ -37,7 +42,7 @@ export const LoginPresentation = ({
             className="text-[--white-color] text-[0.70rem] font-semibold leading-none uppercase"
             htmlFor="password"
           >
-            Password
+            Password <span className="text-[--error-color]">*</span>
             <input
               onChange={(e) => handlePassword(e)}
               className="w-full h-8 rounded-sm mt-2 text-black text-[0.93rem] font-normal focus:outline-none px-2 py-3"

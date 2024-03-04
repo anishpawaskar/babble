@@ -42,6 +42,11 @@ export const Register = () => {
 
           setFormActionInputs(newFormActionInputs);
         }
+        if (/^[a-zA-Z0-9-_]*$/.test(e.target.value)) {
+          console.log('it is matching');
+        } else {
+          console.log('it is not matching');
+        }
         setFormData({ ...formData, username: e.target.value });
         break;
       }

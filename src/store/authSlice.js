@@ -7,11 +7,11 @@ export const authSlice = createSlice({
     self: null,
   },
   reducers: {
-    setIsLoggedIn: (state) => {
-      console.log('isLoggedIn State', state);
+    setIsLoggedIn: (state, { payload: { isLoggedIn } }) => {
+      state.isLoggedIn = isLoggedIn;
     },
-    setSelfData: (state) => {
-      console.log('self data', state);
+    setSelfData: (state, { payload: { selfData } }) => {
+      state.self = selfData;
     },
   },
 });

@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const LoginPresentation = ({
-  handleEmail,
+  handleUserIdentifier,
   handlePassword,
   handleLogin,
+  isLoginFailed,
 }) => {
   return (
     <div className="relative">
@@ -27,22 +28,48 @@ export const LoginPresentation = ({
         </div>
         <form className="flex flex-col gap-4 w-full">
           <label
-            className="text-[--white-color] text-[0.70rem] font-semibold leading-none uppercase"
+            className={
+              isLoginFailed
+                ? 'text-[--error-color] text-[0.688rem] font-[700] leading-none uppercase'
+                : 'text-[--white-color] text-[0.688rem] font-[700] leading-none uppercase'
+            }
             htmlFor="email"
           >
-            Email or username <span className="text-[--error-color]">*</span>
+            Email or username
+            <span
+              className={
+                isLoginFailed
+                  ? 'text-[--error-color] normal-case italic font-[500] text-xs'
+                  : 'text-[--error-color]'
+              }
+            >
+              {isLoginFailed ? ' - Login or password is invalid.' : ' *'}
+            </span>
             <input
-              onChange={(e) => handleEmail(e)}
+              onChange={(e) => handleUserIdentifier(e)}
               className="w-full h-8 rounded-sm mt-2 text-black text-[0.93rem] font-normal focus:outline-none px-2 py-3"
               type="text"
               required
             />
           </label>
           <label
-            className="text-[--white-color] text-[0.70rem] font-semibold leading-none uppercase"
+            className={
+              isLoginFailed
+                ? 'text-[--error-color] text-[0.688rem] font-[700] leading-none uppercase'
+                : 'text-[--white-color] text-[0.688rem] font-[700] leading-none uppercase'
+            }
             htmlFor="password"
           >
-            Password <span className="text-[--error-color]">*</span>
+            Password
+            <span
+              className={
+                isLoginFailed
+                  ? 'text-[--error-color] normal-case italic font-[500] text-xs'
+                  : 'text-[--error-color]'
+              }
+            >
+              {isLoginFailed ? ' - Login or password is invalid.' : ' *'}
+            </span>
             <input
               onChange={(e) => handlePassword(e)}
               className="w-full h-8 rounded-sm mt-2 text-black text-[0.93rem] font-normal focus:outline-none px-2 py-3"
@@ -51,7 +78,7 @@ export const LoginPresentation = ({
             />
           </label>
           <button
-            onClick={handleLogin}
+            onClick={(e) => handleLogin(e)}
             className="text-[--white-color] w-full text-base bg-[--secondary-color] p-2 rounded font-semibold"
           >
             Login
